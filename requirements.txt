@@ -1,0 +1,6 @@
+pytesseract
+simplejson
+numpy
+cv2
+fastapi
+python-multipart

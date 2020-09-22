@@ -11,7 +11,7 @@ import os
 import string
 import math
 from table_extractor import TableExtractor
-from deskew import orient_image
+from deskew import orient_image, orient_doc
 from glob import glob
 import random
 import simplejson 
@@ -339,8 +339,8 @@ def read_image(filename):
 
 def extract(img):
   try:
-    img = orient_image(img)
-    # img = ocr_orient(img)    
+    # img = orient_image(img)
+    img = orient_doc(img)    
   except Exception as E:
     logger.warning('Упал tesseract')
     logger.exception(E)

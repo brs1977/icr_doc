@@ -6,7 +6,7 @@ from logger import logger
 
 def orient_doc(image, max_area = 200):
     ''' Находим в какой четверти маски изображения больше черных пикселей, и считаем что это верхний угол страницы,
-        можно покрутить параметр area - размер контура'''
+        можно покрутить параметр area - размер контура, поддерживается только альбомная ориентация'''
     
     mask = np.zeros(image.shape, dtype=np.uint8)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
